@@ -19,7 +19,7 @@ jobs:
       - name: Init
         run:  |
           ./.ci/scrip1.sh &&
-          env.ENV1="11111" &&
+          echo "::set-env name=ENV1::yellow" &&
           echo "${{ env.ENV1 }}" 
   job2:
     runs-on: ubuntu-20.04
