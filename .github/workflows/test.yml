@@ -8,12 +8,22 @@ jobs:
   job1:
     runs-on: ubuntu-20.04
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref:  ${{ github.event.pull_request.head.sha }}
       - name: Init
         run:  |
           ./ci/scrip1.sh
   job2:
     runs-on: ubuntu-20.04
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref:  ${{ github.event.pull_request.head.sha }}
       - name: Init2
         run: |
           ./ci/script2.sh
