@@ -22,6 +22,7 @@ jobs:
         id: step2
         run:  |
           ./.ci/scrip1.sh &&
+          echo "----- $ENV3" &&
           echo "::set-output name=status::$ENV3" 
   job2:
     runs-on: ubuntu-20.04
