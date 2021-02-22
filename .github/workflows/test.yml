@@ -23,6 +23,7 @@ jobs:
         run:  |
           ./.ci/scrip1.sh &&
           env | grep ENV &&
+          source ~/.bashrc &&
           echo "----- ${ENV3}" &&
           echo "-----1 $ENV3" &&
           echo "-----2 ${{ env.ENV3 }}" &&
