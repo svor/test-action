@@ -22,6 +22,7 @@ jobs:
         id: step2
         run:  |
           ./.ci/scrip1.sh &&
+          env &&
           echo "----- ${ENV3}" &&
           echo "-----1 $ENV3" &&
           echo "-----2 ${{ env.ENV3 }}" &&
