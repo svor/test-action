@@ -41,4 +41,5 @@ jobs:
       - name: Init2
         run: |
           ./.ci/script2.sh &&
+          echo "-----1 $ENV3" &&
           echo "${{ env.ENV1 }}" 
