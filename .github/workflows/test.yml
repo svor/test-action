@@ -18,6 +18,7 @@ jobs:
           ./.ci/scrip1.sh
   job2:
     runs-on: ubuntu-20.04
+    needs: job1
     steps:
       - name: Checkout
         uses: actions/checkout@v2
