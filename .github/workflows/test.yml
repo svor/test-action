@@ -11,7 +11,7 @@ jobs:
   job1:
     runs-on: ubuntu-20.04
     outputs:
-      job-status: ${{ job.status }}
+      job-status: ${{ steps.step2.outputs.status }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -19,13 +19,14 @@ jobs:
           fetch-depth: 0
           ref:  ${{ github.event.pull_request.head.sha }}
       - name: Init
+        id: step2
         run:  |
           ./.ci/scrip1.sh &&
-          echo "${{ env.ENV1 }}" 
+          echo "::set-output name=status::$ENV3" 
   job2:
     runs-on: ubuntu-20.04
     needs: job1
-    if: needs.job1.outputs.job-status != 'Success'
+    if: needs.job1.outputs.job-status == 'in1'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
