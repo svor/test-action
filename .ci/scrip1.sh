@@ -14,4 +14,3 @@
 echo "Hello 1"
 ENV3=in1 
 echo "export ENV3=${ENV3}" > ~/.bashrc
-source ~/.bashrc
