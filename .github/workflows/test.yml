@@ -25,7 +25,7 @@ jobs:
   job2:
     runs-on: ubuntu-20.04
     needs: job1
-    if: needs.job1.outputs.job-status == 'Success'
+    if: needs.job1.outputs.job-status != 'Success'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
