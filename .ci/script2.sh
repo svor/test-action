@@ -11,4 +11,4 @@
 # Contributors:
 #   Red Hat, Inc. - initial API and implementation
 
-echo "Hello 1"
+echo "Hello 2"

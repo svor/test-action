@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+env:
+  ENV1: environment
+
 jobs:
   job1:
     runs-on: ubuntu-20.04
@@ -15,7 +18,8 @@ jobs:
           ref:  ${{ github.event.pull_request.head.sha }}
       - name: Init
         run:  |
-          ./.ci/scrip1.sh
+          ./.ci/scrip1.sh &&
+          echo "${{ env.ENV1 }}" 
   job2:
     runs-on: ubuntu-20.04
     needs: job1
