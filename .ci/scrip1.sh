@@ -12,4 +12,5 @@
 #   Red Hat, Inc. - initial API and implementation
 
 echo "Hello 1"
-export ENV3="in1"
+export ENV3="in1" > ~/.bashrc 
+source ~/.bashrc
