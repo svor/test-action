@@ -15,7 +15,7 @@ jobs:
           ref:  ${{ github.event.pull_request.head.sha }}
       - name: Init
         run:  |
-          ./ci/scrip1.sh
+          ./.ci/scrip1.sh
   job2:
     runs-on: ubuntu-20.04
     steps:
@@ -26,4 +26,4 @@ jobs:
           ref:  ${{ github.event.pull_request.head.sha }}
       - name: Init2
         run: |
-          ./ci/script2.sh
+          ./.ci/script2.sh
