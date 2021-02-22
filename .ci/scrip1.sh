@@ -12,3 +12,4 @@
 #   Red Hat, Inc. - initial API and implementation
 
 echo "Hello 1"
+export ENV1="in1"

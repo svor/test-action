@@ -31,4 +31,5 @@ jobs:
           ref:  ${{ github.event.pull_request.head.sha }}
       - name: Init2
         run: |
-          ./.ci/script2.sh
+          ./.ci/script2.sh &&
+          echo "${{ env.ENV1 }}" 
