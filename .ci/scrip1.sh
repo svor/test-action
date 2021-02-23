@@ -18,3 +18,4 @@ echo "export ENV3=${ENV3}" >> ~/.bashrc
 echo "export ENV4=${ENV4}" >> ~/.bashrc
 source ~/.bashrc
 echo "action_state=yellow" >> $GITHUB_ENV
+echo "::set-env name=VERSION::19.2.5"
