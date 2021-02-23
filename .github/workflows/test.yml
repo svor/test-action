@@ -28,7 +28,7 @@ jobs:
   job2:
     runs-on: ubuntu-20.04
     needs: job1
-    if: needs.job1.outputs.job-status == 'in1'
+    if: needs.job1.outputs.job-status != 'in1'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
