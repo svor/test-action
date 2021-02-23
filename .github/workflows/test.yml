@@ -25,6 +25,7 @@ jobs:
           env | grep ENV &&
           source ~/.bashrc &&
           source ~/.profile &&
+          cat ~/.bashrc &&
           echo "-----1 $ENV3" &&
           echo "-----2 $ENV4" &&
           echo "::set-output name=status::${ENV3}" 
