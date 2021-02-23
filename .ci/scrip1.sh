@@ -17,4 +17,4 @@ ENV4=aaaaaa
 echo "export ENV3=${ENV3}" >> ~/.bashrc
 echo "export ENV4=${ENV4}" >> ~/.bashrc
 source ~/.bashrc
-echo ~/.bashrc
+cat ~/.bashrc
