@@ -26,10 +26,9 @@ jobs:
           source ~/.bashrc &&
           echo "-----1 $ENV3" &&
           echo "-----2 $ENV4" &&
-          echo "::set-env name=ENV1::asasasasasasasasasas"
-          echo "::set-output name=status::${ENV3}" 
-          source ~/.bashrc &&
-          cat ~/.bashrc &&
+          echo "action_state=yellow" >> $GITHUB_ENV &&
+          echo "::set-output name=status::${ENV3}" &&
+          echo "${{ env.action_state }}"
   job2:
     runs-on: ubuntu-20.04
     needs: job1
@@ -43,5 +42,6 @@ jobs:
       - name: Init2
         run: |
           ./.ci/script2.sh &&
+          cat env &&
           echo "-----1 $ENV3" &&
           echo "${{ env.ENV1 }}" 
