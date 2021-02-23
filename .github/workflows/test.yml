@@ -24,6 +24,7 @@ jobs:
           ./.ci/scrip1.sh &&
           env | grep ENV &&
           source ~/.bashrc &&
+          source ~/.profile &&
           echo "-----1 $ENV3" &&
           echo "-----2 $ENV4" &&
           echo "::set-output name=status::${ENV3}" 
