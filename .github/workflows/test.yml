@@ -21,8 +21,7 @@ jobs:
       - name: Init
         id: step2
         run:  |
-          ./.ci/scrip1.sh &&
-          echo "action_state=yellow" >> $GITHUB_ENV &&
+          ./.ci/scrip1.sh && 
           echo "::set-output name=status::${ENV3}"
       - name: Read
         id: step3
