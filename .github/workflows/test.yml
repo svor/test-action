@@ -40,6 +40,6 @@ jobs:
       - name: Init2
         run: |
           ./.ci/script2.sh &&
-          echo "${{ env.action_state }}" &&
+          echo "AAAA ---> ${{ needs.job1.env.action_state }}" &&
           echo "-----1 $ENV3" &&
           echo "${{ env.ENV1 }}" 
