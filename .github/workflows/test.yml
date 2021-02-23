@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-20.04
     outputs:
       job-status: ${{ steps.step2.outputs.status }}
+    env:
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: true
     steps:
       - name: Checkout
         uses: actions/checkout@v2
